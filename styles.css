@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 20px;
+    margin: 0 auto;
+     width: 1000px;
+     height: auto;    
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 60px auto;
+     grid-template-areas: 
+     "hd"
+     "main";    
+
+     grid-gap: 70px;
+
+}
+#wrapper{
+  justify-content: center;
+  
+}
+
+#header{
+    /* padding: 50px; */
+     grid-area: hd;
+     display: grid;
+     grid-template-columns:3;
+     grid-row: 30px;
+     grid-template-areas: 
+     "s t se";    
+     justify-content: space-between 
+}
+#content{
+    grid-area: main;
+    
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.blue{
+    color: blue;
+}
+.blu{
+    color: rgb(29, 174, 29);
+}
+.subbox{
+    padding: 25px;
+    border: 5px solid rgba(128, 128, 128, 0.61);
+   
+   width: 28rem;
+    margin-bottom: 25px;
+    
+}
+.gr{
+    color: green;
+}
+#sub{
+    background: none;
+    border:0px;
+    font-size: 1.05rem;
+}
+#im{
+ margin-left: 5px;
+}
+@media( max-width:600px){
+  .box{
+    display: grid;
+    overflow-x: hidden;
+    overflow-y: auto;
+    grid-auto-columns: 1fr;
+    grid-template-rows:1fr 1fr; 
+    grid-template-areas: 
+      "up"
+      "dn" ;
+  }
+  .subbox{
+    padding: 22px;
+    border: 5px solid rgba(128, 128, 128, 0.61);
+   
+   width: 20rem;
+    margin-bottom: 25px;
+  }
+  #header{
+   
+     grid-area: hd;
+     display: grid;
+     grid-template-columns:1fr;
+     grid-template-rows:auto auto auto;
+     
+     grid-template-areas:    
+     "t"
+     "s"
+     "se";   
+     justify-content: space-between 
+}
+#ti{
+    grid-area: t;
+}
+#sub{
+    grid-area: s;
+}
+#search{
+    grid-area: se;
+}
+  .u{
+    grid-area: up;
+  }
+  .d{
+    grid-area: dn;
+  }
+  .container{
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    margin: 0 auto;
+     width: 500px;
+     height: auto;    
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 60px auto;
+     grid-template-areas: 
+     "hd"
+     "main";    
+
+     grid-gap: 70px;
+
+}
+}

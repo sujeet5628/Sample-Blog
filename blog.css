@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 20px;
+    margin: 0 auto;
+     width: 80rem;
+     /* padding: 20px; */
+     height: auto;
+     /* border: 1px solid red ; */
+     /* background-color: yellow; */
+     display: grid;
+     grid-template-columns: 1fr 0.25fr;
+     grid-template-rows: 30px auto;
+     grid-template-areas: 
+     "hd hd"
+     "main sd"
+     "ft ft";    
+
+     grid-gap: 70px;
+}
+#header{
+    /* padding: 50px; */
+     grid-area: hd;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+}
+#con{
+    grid-area: main;
+    /* padding: 10px; */
+    /* background-color: aqua; */
+}
+#sid{
+    grid-area: sd;
+    /* background-color: yellow; */
+}
+#foot{
+    grid-area: ft;
+    /* font-size: 1.3rem; */
+}
+.ab{
+    background-color: rgba(96, 92, 92, 0.103);
+    border-radius: 5px;
+    padding: 10px;
+}
+.bo{
+    border: 0.5px solid rgba(0, 0, 0, 0.481);
+}
+.li{
+    margin-left: 35px;
+}
+.postbutton{
+    padding: 8px;
+    border-radius: 2rem;
+    background-color: white;
+}
+.postbutton:hover{
+    color: blue;
+    border-color: blue;
+}
+#sub{
+    border: 0px;
+    background-color: white;
+}
+.horizontal{
+    color: rgb(21, 20, 20);
+}
+p,li{
+    font-size: 1.2rem;
+}
+.ar,.else,.ab{
+    font-size: 1.2rem; 
+}
+#im{
+    margin-left: 5px;
+}
+
+
+    
+@media screen and (max-width:600px){
+ .container{
+    padding: 20px;
+    margin: 0 auto;
+     width: 22rem;
+     /* padding: 20px; */
+     height: auto;
+     /* border: 1px solid red ; */
+     /* background-color: yellow; */
+     display: grid;
+     grid-template-columns: 1fr ;
+     grid-template-rows: 30px auto auto 30px;
+     grid-template-areas: 
+     "hd "
+     "sd"
+     "main "
+     "ft ";   
+ }
+ #header{
+   
+    grid-area: hd;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    
+    grid-template-areas:    
+    "t"
+    "s"
+    "se";   
+    justify-content: space-between 
+}
+#sub{
+    grid-area: s;
+    
+}
+#ti{
+    grid-area: t;
+}
+#search{
+  grid-area: se;
+}
+}
